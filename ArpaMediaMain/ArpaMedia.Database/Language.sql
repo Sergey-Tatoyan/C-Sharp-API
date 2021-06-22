@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Language](
+[Id] [int] NOT NULL IDENTITY(1,1),
+[Code] nvarchar(60) NOT NULL,
+[DisplayName] nvarchar(255) NOT NULL,
+[Created] [datetime2](7) NOT NULL,
+[LastModified] [datetime2](7) NOT NULL
+CONSTRAINT [PRK_Language] PRIMARY KEY CLUSTERED
+(
+[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO

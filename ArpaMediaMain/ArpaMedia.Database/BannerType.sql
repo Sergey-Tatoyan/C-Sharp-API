@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[BannerType]
+(
+	[Id] [int] NOT NULL IDENTITY(1,1),
+	[Title] nvarchar(255) NOT NULL UNIQUE,
+	[LanguageId] [int] NOT NULL
+
+
+CONSTRAINT [PRK_BannerType] PRIMARY KEY CLUSTERED
+(
+[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[BannerType] ADD  CONSTRAINT [FRK_BannerType_Language] FOREIGN KEY([LanguageId])
+REFERENCES [dbo].[Language] ([Id])
+GO

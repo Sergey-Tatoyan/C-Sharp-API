@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArpaMedia.Web.Api</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.UsersController.Authenticate(WebApi.Models.AuthenticateRequest)">
+            <summary>
+            Post Operation
+            </summary>
+            <remarks>
+            This request is for authentication.
+            
+                Here you must give the user model and get token. The token expiration is 15 min.
+                
+            </remarks>
+            <param name="model">The user model must contain email and password.</param>
+        </member>
+        <member name="M:ArpaMedia.Web.Api.Services.Authorization.AuthenticationProvider.CreatePasswordComponents(System.String,System.Byte[]@,System.Byte[]@)">
+            <summary>
+            Creates password components (key and salt)
+            </summary>
+            <param name="password"></param>
+            <param name="key"></param>
+            <param name="salt"></param>
+        </member>
+    </members>
+</doc>
